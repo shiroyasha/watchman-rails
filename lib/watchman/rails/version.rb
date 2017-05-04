@@ -1,4 +1,4 @@
-module Watchman
+class Watchman
   module Rails
     VERSION = "0.1.0"
   end

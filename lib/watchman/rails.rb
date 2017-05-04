@@ -1,7 +1,7 @@
 require "watchman/rails/version"
+require "watchman/rails/controller_benchmark"
 
-module Watchman
+class Watchman
   module Rails
-    # Your code goes here...
   end
 end
