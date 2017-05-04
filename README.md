@@ -20,7 +20,40 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### Controllers
+
+Inject the `Watchman::Rails::ControllerBenchmark` into your application's
+controller in order to collect benchmarks.
+
+``` ruby
+class ApplicationController < ActiveController::Base
+  include Watchman::Rails::ControllerBenchmark
+end
+```
+
+When included the duration of every action in each controller will be collected.
+For example, if you have a `UsersController` controller with a `show` action:
+
+``` ruby
+class Userscontroller < Applicationcontroller
+  def show
+    render :json => { "name" => "Peter Parker" }
+  end
+end
+```
+
+When a request arrives, the following benchmark metric will be saved:
+
+``` txt
+rails.controllers.users.show
+```
+
+In the generic case, the following metric will be generated for your
+controllers:
+
+``` ruby
+rails.controllers.<controller_name>.<action>
+```
 
 ## Development
 
