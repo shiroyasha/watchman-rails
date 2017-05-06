@@ -1,5 +1,7 @@
 # Watchman Rails
 
+[![Build Status](https://semaphoreci.com/api/v1/shiroyasha/watchman-rails/branches/master/badge.svg)](https://semaphoreci.com/shiroyasha/watchman-rails)
+
 [Watchman](https://github.com/renderedtext/watchman) extensions for Rails applications.
 
 ## Installation
