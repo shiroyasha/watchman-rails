@@ -1,5 +1,6 @@
 # Watchman Rails
 
+[![Gem Version](https://badge.fury.io/rb/watchman-rails.svg)](https://badge.fury.io/rb/watchman-rails)
 [![Build Status](https://semaphoreci.com/api/v1/shiroyasha/watchman-rails/branches/master/badge.svg)](https://semaphoreci.com/shiroyasha/watchman-rails)
 
 [Watchman](https://github.com/renderedtext/watchman) extensions for Rails applications.
