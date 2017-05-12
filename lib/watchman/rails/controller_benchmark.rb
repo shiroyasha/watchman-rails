@@ -15,9 +15,7 @@ class Watchman
                                     .gsub("/", "_")
                                     .gsub(/_controller$/, "")
 
-        name = "rails.controllers.#{bench_controller_name}.#{action_name}"
-
-        Watchman.benchmark(name) { yield }
+        Watchman.benchmark("rails.controllers", :tags => [bench_controller_name, action_name]) { yield }
       end
 
     end

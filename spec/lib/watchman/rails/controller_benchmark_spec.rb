@@ -24,9 +24,7 @@ RSpec.describe Watchman::Rails::ControllerBenchmark do
   end
 
   it "benchmarks controller actions" do
-    measurment_name = "rails.controllers.users.show"
-
-    expect(Watchman).to receive(:benchmark).with(measurment_name).and_call_original
+    expect(Watchman).to receive(:benchmark).with("rails.controllers", :tags => ["users", "show"]).and_call_original
 
     UsersController.action("show").call(
       "REQUEST_METHOD" => "GET",
@@ -34,9 +32,7 @@ RSpec.describe Watchman::Rails::ControllerBenchmark do
   end
 
   it "includes namespace in the nemtric name" do
-    measurment_name = "rails.controllers.admin_users.show"
-
-    expect(Watchman).to receive(:benchmark).with(measurment_name).and_call_original
+    expect(Watchman).to receive(:benchmark).with("rails.controllers", :tags => ["admin_users", "show"]).and_call_original
 
     Admin::UsersController.action("show").call(
       "REQUEST_METHOD" => "GET",
