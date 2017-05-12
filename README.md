@@ -47,15 +47,15 @@ end
 
 When a request arrives, the following benchmark metric will be saved:
 
-``` txt
-rails.controllers.users.show
+``` ruby
+rails.controllers :tags => ["users", "show"]
 ```
 
 In the generic case, the following metric will be generated for your
 controllers:
 
 ``` ruby
-rails.controllers.<controller_name>.<action>
+rails.controllers :tags => [<controller_name>, <action>]
 ```
 
 ## Development
